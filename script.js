@@ -31,3 +31,20 @@ document.addEventListener("keydown", (event) => {
 
 // フッターの年を自動更新
 document.getElementById("current-year").textContent = new Date().getFullYear();
+
+// ポートフォリオ用ダミーリンクの案内
+const demoToast = document.querySelector(".demo-toast");
+let toastTimer;
+
+document.querySelectorAll("[data-demo-link]").forEach((link) => {
+  link.addEventListener("click", () => {
+    demoToast.setAttribute("aria-hidden", "false");
+    demoToast.classList.add("is-visible");
+
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      demoToast.classList.remove("is-visible");
+      demoToast.setAttribute("aria-hidden", "true");
+    }, 3200);
+  });
+});

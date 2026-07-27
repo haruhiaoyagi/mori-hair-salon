@@ -3,8 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="東京・清澄白河の小さな美容室、mori hair salon。髪と心がほどける、静かなひとときを。">
-  <title>mori hair salon｜清澄白河の美容室</title>
+  <meta name="description" content="個人美容室を想定して制作したポートフォリオ用の架空Webサイト。落ち着いた世界観と、スマートフォンで予約しやすい導線をデザインしました。">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="mori hair salon｜Web Design Portfolio">
+  <meta property="og:description" content="個人美容室を想定して制作した、ポートフォリオ用の架空Webサイトです。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://haruhiaoyagi.github.io/mori-hair-salon/">
+  <meta property="og:image" content="https://haruhiaoyagi.github.io/mori-hair-salon/assets/og-image.png">
+  <meta property="og:image:alt" content="mori hair salon 架空サイト Web Design Portfolio">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#405c4d">
+  <title>mori hair salon｜美容室サイト制作実績</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
@@ -35,13 +44,19 @@
     </nav>
   </header>
 
+  <!-- このサイトが実在店舗ではなく制作実績であることを明示 -->
+  <aside class="portfolio-notice" id="portfolio-note" aria-label="サイトについて">
+    <span>PORTFOLIO PROJECT</span>
+    <p>このWebサイトは制作実績として作成した架空の美容室サイトです。掲載内容・店舗は実在しません。</p>
+  </aside>
+
   <main id="main">
     <!-- ファーストビュー -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">A quiet salon in Kiyosumi-Shirakawa</p>
+        <p class="eyebrow">A quiet salon for your everyday</p>
         <h1 id="hero-title">髪と心がほどける、<br>静かなひとときを。</h1>
-        <p class="hero-text">暮らしに馴染む、やわらかな髪へ。<br>一人ひとりの「らしさ」を大切に整えます。</p>
+        <p class="hero-text">暮らしに馴染む、やわらかな髪へ。<br>一人ひとりの「らしさ」に寄り添い、丁寧に整えます。</p>
         <a class="button button-primary" href="#reserve">ご予約はこちら <span aria-hidden="true">→</span></a>
       </div>
       <div class="hero-visual" aria-hidden="true">
@@ -64,7 +79,7 @@
       <div class="concept-content">
         <h2>毎日に、そっと馴染む髪。</h2>
         <div>
-          <p>moriは、2席だけの小さなプライベートサロンです。髪質や骨格はもちろん、毎朝の過ごし方まで伺いながら、ご自宅でも無理なく続くスタイルをご提案します。</p>
+          <p>moriは、2席だけの小さなプライベートサロンです。髪質や骨格はもちろん、普段のお手入れ方法まで伺いながら、ご自宅でも再現しやすいスタイルをご提案します。</p>
           <p>自然光の入る静かな空間で、季節の植物と香りに包まれながら、どうぞゆっくりお過ごしください。</p>
         </div>
       </div>
@@ -127,7 +142,7 @@
           <h2>佐藤 美織 <small>さとう みおり</small></h2>
           <p>都内サロンで12年勤務したのち、2022年にmoriをオープン。乾かすだけでまとまるボブと、やわらかな透明感カラーが得意です。</p>
           <p class="message">「髪のお悩みも、何気ないお話も。気軽に聞かせてください。」</p>
-          <a class="text-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagramを見る <span aria-hidden="true">↗</span></a>
+          <a class="text-link demo-link" href="#portfolio-note" data-demo-link>Instagram <span>@mori_hair_demo</span></a>
         </div>
       </div>
     </section>
@@ -142,18 +157,18 @@
         <div class="map-illustration" aria-label="店舗周辺の簡易地図">
           <span class="road road-a"></span><span class="road road-b"></span>
           <span class="river"></span>
-          <span class="station">清澄白河駅</span>
+          <span class="station">サンプル駅</span>
           <span class="map-pin">mori</span>
         </div>
         <div class="access-copy">
           <h2>mori hair salon</h2>
-          <address>〒135-0021<br>東京都江東区白河1-2-3 moriビル 1F</address>
+          <address>〒000-0000<br>東京都サンプル区みどり町1-2-3</address>
           <dl class="shop-info">
             <div><dt>営業時間</dt><dd>10:00 – 19:00</dd></div>
             <div><dt>定休日</dt><dd>毎週火曜日・第2月曜日</dd></div>
-            <div><dt>アクセス</dt><dd>清澄白河駅 A3出口より徒歩3分</dd></div>
+            <div><dt>アクセス</dt><dd>サンプル駅 A3出口より徒歩3分</dd></div>
           </dl>
-          <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=%E6%B8%85%E6%BE%84%E7%99%BD%E6%B2%B3%E9%A7%85" target="_blank" rel="noopener noreferrer">Google Mapsで見る <span aria-hidden="true">↗</span></a>
+          <a class="text-link demo-link" href="#portfolio-note" data-demo-link>地図を見る <span>（デモ）</span></a>
         </div>
       </div>
     </section>
@@ -164,8 +179,8 @@
       <h2>ご予約・ご相談</h2>
       <p>施術中はお電話に出られない場合があります。<br>Web予約は24時間受け付けています。</p>
       <div class="reserve-actions">
-        <a class="button button-light" href="https://example.com/" target="_blank" rel="noopener noreferrer">Webで予約する <span aria-hidden="true">→</span></a>
-        <a class="phone-link" href="tel:0312345678"><small>お電話でのご予約</small>03-1234-5678</a>
+        <a class="button button-light demo-link" href="#portfolio-note" data-demo-link>Web予約（デモ） <span aria-hidden="true">→</span></a>
+        <a class="phone-link demo-link" href="#portfolio-note" data-demo-link><small>お電話でのご予約（デモ）</small>000-0000-0000</a>
       </div>
     </section>
   </main>
@@ -176,7 +191,7 @@
       <p>髪と心がほどける、静かなひとときを。</p>
     </div>
     <div class="footer-links">
-      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+      <a class="demo-link" href="#portfolio-note" data-demo-link>Instagram（デモ）</a>
       <a href="#access">Access</a>
       <a href="#reserve">Reservation</a>
     </div>
@@ -185,6 +200,11 @@
 
   <!-- スマートフォンで常に表示される予約ボタン -->
   <a class="floating-reserve" href="#reserve">予約する</a>
+
+  <!-- ダミーリンクを押したときの案内 -->
+  <div class="demo-toast" role="status" aria-live="polite" aria-hidden="true">
+    ポートフォリオ用のため、このリンクは実際には機能しません。
+  </div>
 
   <script src="script.js"></script>
 </body>

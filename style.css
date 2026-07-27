@@ -25,6 +25,7 @@ body {
 }
 a { color: inherit; text-decoration: none; }
 button { font: inherit; }
+a, button { -webkit-tap-highlight-color: transparent; }
 .sr-only, .skip-link {
   position: absolute;
   width: 1px; height: 1px;
@@ -68,6 +69,27 @@ button { font: inherit; }
 .nav-reserve { padding: 10px 22px; color: white; background: var(--green); border-radius: 100px; }
 .menu-button { display: none; }
 
+/* 架空サイトであることを示す固定ラベル */
+.portfolio-notice {
+  position: fixed;
+  z-index: 40;
+  left: 50%;
+  bottom: 20px;
+  width: min(680px, calc(100% - 40px));
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 12px 18px;
+  color: var(--cream);
+  background: rgba(35, 52, 45, .96);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(35, 52, 45, .2);
+  transform: translateX(-50%);
+}
+.portfolio-notice span { flex: none; font: 10px var(--serif); letter-spacing: .14em; }
+.portfolio-notice p { margin: 0; font-size: 10px; line-height: 1.6; letter-spacing: .02em; }
+
 /* ファーストビュー */
 .hero {
   min-height: 760px;
@@ -97,8 +119,9 @@ button { font: inherit; }
 .hero-text { margin: 26px 0 36px; font-size: 15px; }
 .button {
   display: inline-flex;
-  min-width: 220px;
-  padding: 17px 24px;
+  min-width: 230px;
+  min-height: 56px;
+  padding: 16px 25px;
   align-items: center;
   justify-content: space-between;
   border-radius: 100px;
@@ -217,6 +240,7 @@ button { font: inherit; }
 .staff-copy > p { margin-bottom: 22px; }
 .message { padding-left: 18px; border-left: 1px solid var(--green); font-family: "Yu Mincho", serif; }
 .text-link { display: inline-block; margin-top: 15px; padding-bottom: 3px; border-bottom: 1px solid currentColor; font-size: 12px; }
+.demo-link span { font-size: .85em; opacity: .75; }
 
 /* アクセス */
 .access-section { background: #dce2da; }
@@ -252,13 +276,47 @@ address { margin: 24px 0; font-style: normal; }
 .copyright { grid-column: 1 / -1; margin: 30px 0 0; color: #7c897f; font-size: 9px; }
 .floating-reserve { display: none; }
 
+.demo-toast {
+  position: fixed;
+  z-index: 60;
+  left: 50%;
+  bottom: 90px;
+  width: max-content;
+  max-width: calc(100% - 32px);
+  padding: 12px 18px;
+  color: white;
+  background: var(--ink);
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 10px);
+  transition: opacity .2s, transform .2s;
+  font-size: 12px;
+}
+.demo-toast.is-visible { opacity: 1; transform: translate(-50%, 0); }
+
 /* タブレット・スマートフォン */
 @media (max-width: 800px) {
   body { font-size: 14px; padding-bottom: 58px; }
+  .portfolio-notice {
+    position: relative;
+    z-index: 5;
+    left: 0; bottom: auto;
+    width: 100%;
+    display: block;
+    padding: 10px 18px;
+    text-align: center;
+    border: 0;
+    border-radius: 0;
+    margin-top: 88px;
+    transform: none;
+  }
+  .portfolio-notice span { display: block; margin-bottom: 3px; }
   .site-header { position: absolute; padding: 20px 22px; }
   .menu-button {
     z-index: 25;
-    width: 42px; height: 42px;
+    width: 48px; height: 48px;
     display: grid; place-content: center; gap: 7px;
     border: 0; border-radius: 50%;
     color: white; background: var(--green);
@@ -279,10 +337,16 @@ address { margin: 24px 0; font-style: normal; }
     background: var(--cream);
     transition: opacity .25s, visibility .25s;
   }
+  .global-nav a {
+    min-width: 160px;
+    min-height: 48px;
+    display: grid;
+    place-items: center;
+  }
   .global-nav.is-open { visibility: visible; opacity: 1; }
   .nav-reserve { font: 13px var(--sans); }
-  .hero { height: auto; min-height: 100svh; grid-template-columns: 1fr; grid-template-rows: auto 42vh; padding-top: 90px; }
-  .hero-copy { padding: 45px 24px; }
+  .hero { height: auto; min-height: calc(100svh - 75px); grid-template-columns: 1fr; grid-template-rows: auto 42vh; padding-top: 10px; }
+  .hero-copy { padding: 38px 24px 45px; }
   .hero h1 { font-size: clamp(34px, 10vw, 48px); }
   .hero-text { margin: 20px 0 28px; }
   .hero-visual { grid-row: 2; }
@@ -306,6 +370,7 @@ address { margin: 24px 0; font-style: normal; }
   .access-copy h2 { font-size: 32px; }
   .reserve-section { padding: 82px 24px; }
   .reserve-actions { flex-direction: column; gap: 26px; }
+  .reserve-actions .button, .phone-link { width: min(100%, 320px); min-height: 58px; justify-content: center; }
   .site-footer { grid-template-columns: 1fr; }
   .footer-links { flex-wrap: wrap; }
   .copyright { grid-column: auto; }
@@ -322,6 +387,7 @@ address { margin: 24px 0; font-style: normal; }
     letter-spacing: .12em;
     box-shadow: 0 -4px 16px rgba(35, 52, 45, .14);
   }
+  .demo-toast { bottom: 76px; text-align: center; }
 }
 
 /* 動きを減らす設定の端末ではアニメーションを無効化 */
