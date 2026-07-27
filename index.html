@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="東京・清澄白河の小さな美容室、mori hair salon。髪と心がほどける、静かなひとときを。">
+  <title>mori hair salon｜清澄白河の美容室</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- キーボード操作で本文へ移動するためのリンク -->
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="site-header" id="top">
+    <a class="logo" href="#top" aria-label="mori hair salon トップへ">
+      <span>mori</span>
+      <small>HAIR SALON</small>
+    </a>
+
+    <!-- スマートフォン用メニューボタン -->
+    <button class="menu-button" type="button" aria-expanded="false" aria-controls="global-nav">
+      <span></span><span></span>
+      <span class="sr-only">メニューを開く</span>
+    </button>
+
+    <nav class="global-nav" id="global-nav" aria-label="メインメニュー">
+      <a href="#concept">Concept</a>
+      <a href="#menu">Menu</a>
+      <a href="#staff">Staff</a>
+      <a href="#access">Access</a>
+      <a class="nav-reserve" href="#reserve">ご予約</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ファーストビュー -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">A quiet salon in Kiyosumi-Shirakawa</p>
+        <h1 id="hero-title">髪と心がほどける、<br>静かなひとときを。</h1>
+        <p class="hero-text">暮らしに馴染む、やわらかな髪へ。<br>一人ひとりの「らしさ」を大切に整えます。</p>
+        <a class="button button-primary" href="#reserve">ご予約はこちら <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="arch">
+          <span class="leaf leaf-one"></span>
+          <span class="leaf leaf-two"></span>
+          <span class="sun"></span>
+          <p>slow down<br>&amp; breathe</p>
+        </div>
+      </div>
+      <a class="scroll-hint" href="#concept">SCROLL <span></span></a>
+    </section>
+
+    <!-- コンセプト -->
+    <section class="section concept" id="concept">
+      <div class="section-heading">
+        <p class="section-number">01</p>
+        <p class="eyebrow">Concept</p>
+      </div>
+      <div class="concept-content">
+        <h2>毎日に、そっと馴染む髪。</h2>
+        <div>
+          <p>moriは、2席だけの小さなプライベートサロンです。髪質や骨格はもちろん、毎朝の過ごし方まで伺いながら、ご自宅でも無理なく続くスタイルをご提案します。</p>
+          <p>自然光の入る静かな空間で、季節の植物と香りに包まれながら、どうぞゆっくりお過ごしください。</p>
+        </div>
+      </div>
+      <div class="concept-words" aria-label="大切にしていること">
+        <span>natural</span><i></i><span>personal</span><i></i><span>sustainable</span>
+      </div>
+    </section>
+
+    <!-- 料金表：内容や価格はここを書き換えられます -->
+    <section class="section menu-section" id="menu">
+      <div class="section-heading">
+        <p class="section-number">02</p>
+        <p class="eyebrow">Menu &amp; Price</p>
+      </div>
+      <div class="menu-intro">
+        <h2>あなたの髪に、<br>必要なものだけを。</h2>
+        <p>すべて税込価格です。カウンセリング・シャンプー・ブローを含みます。</p>
+      </div>
+      <div class="price-grid">
+        <article class="price-card">
+          <h3>Cut</h3>
+          <dl>
+            <div><dt>カット</dt><dd>¥5,500</dd></div>
+            <div><dt>大学・専門学生</dt><dd>¥4,400</dd></div>
+            <div><dt>キッズカット</dt><dd>¥3,300</dd></div>
+          </dl>
+        </article>
+        <article class="price-card">
+          <h3>Color</h3>
+          <dl>
+            <div><dt>カラー</dt><dd>¥7,700〜</dd></div>
+            <div><dt>リタッチ</dt><dd>¥6,600</dd></div>
+            <div><dt>ハイライト</dt><dd>+ ¥4,400〜</dd></div>
+          </dl>
+        </article>
+        <article class="price-card">
+          <h3>Care</h3>
+          <dl>
+            <div><dt>ヘッドスパ（30分）</dt><dd>¥4,400</dd></div>
+            <div><dt>トリートメント</dt><dd>¥3,300〜</dd></div>
+            <div><dt>髪質改善ケア</dt><dd>¥8,800</dd></div>
+          </dl>
+        </article>
+      </div>
+      <p class="price-note">※ 髪の長さ・状態により料金が変わる場合があります。詳しくはご予約時にご相談ください。</p>
+    </section>
+
+    <!-- スタッフ紹介 -->
+    <section class="section staff-section" id="staff">
+      <div class="section-heading">
+        <p class="section-number">03</p>
+        <p class="eyebrow">Staff</p>
+      </div>
+      <div class="staff-wrap">
+        <div class="staff-portrait" role="img" aria-label="スタイリスト佐藤美織のイメージ">
+          <span>MIORI<br>SATO</span>
+        </div>
+        <div class="staff-copy">
+          <p class="role">Owner / Stylist</p>
+          <h2>佐藤 美織 <small>さとう みおり</small></h2>
+          <p>都内サロンで12年勤務したのち、2022年にmoriをオープン。乾かすだけでまとまるボブと、やわらかな透明感カラーが得意です。</p>
+          <p class="message">「髪のお悩みも、何気ないお話も。気軽に聞かせてください。」</p>
+          <a class="text-link" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagramを見る <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- アクセス -->
+    <section class="section access-section" id="access">
+      <div class="section-heading">
+        <p class="section-number">04</p>
+        <p class="eyebrow">Access</p>
+      </div>
+      <div class="access-grid">
+        <div class="map-illustration" aria-label="店舗周辺の簡易地図">
+          <span class="road road-a"></span><span class="road road-b"></span>
+          <span class="river"></span>
+          <span class="station">清澄白河駅</span>
+          <span class="map-pin">mori</span>
+        </div>
+        <div class="access-copy">
+          <h2>mori hair salon</h2>
+          <address>〒135-0021<br>東京都江東区白河1-2-3 moriビル 1F</address>
+          <dl class="shop-info">
+            <div><dt>営業時間</dt><dd>10:00 – 19:00</dd></div>
+            <div><dt>定休日</dt><dd>毎週火曜日・第2月曜日</dd></div>
+            <div><dt>アクセス</dt><dd>清澄白河駅 A3出口より徒歩3分</dd></div>
+          </dl>
+          <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=%E6%B8%85%E6%BE%84%E7%99%BD%E6%B2%B3%E9%A7%85" target="_blank" rel="noopener noreferrer">Google Mapsで見る <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 予約：電話番号と予約URLは実際のものへ変更してください -->
+    <section class="reserve-section" id="reserve">
+      <p class="eyebrow">Reservation</p>
+      <h2>ご予約・ご相談</h2>
+      <p>施術中はお電話に出られない場合があります。<br>Web予約は24時間受け付けています。</p>
+      <div class="reserve-actions">
+        <a class="button button-light" href="https://example.com/" target="_blank" rel="noopener noreferrer">Webで予約する <span aria-hidden="true">→</span></a>
+        <a class="phone-link" href="tel:0312345678"><small>お電話でのご予約</small>03-1234-5678</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <a class="logo footer-logo" href="#top"><span>mori</span><small>HAIR SALON</small></a>
+      <p>髪と心がほどける、静かなひとときを。</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
+      <a href="#access">Access</a>
+      <a href="#reserve">Reservation</a>
+    </div>
+    <p class="copyright">© <span id="current-year">2026</span> mori hair salon</p>
+  </footer>
+
+  <!-- スマートフォンで常に表示される予約ボタン -->
+  <a class="floating-reserve" href="#reserve">予約する</a>
+
+  <script src="script.js"></script>
+</body>
+</html>
